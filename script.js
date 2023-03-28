@@ -6,7 +6,7 @@ let rockWinScissors = "Rock beats Scissors"
 let draw = "It is a draw!"
 
 function getComputerChoice() {
-   computerInput[Math.floor(Math.random()*computerInput.length)]
+   return computerInput[Math.floor(Math.random()*computerInput.length)]
 }
 
 function playRound(playerSelection, computerSelection) {
@@ -33,5 +33,5 @@ function playRound(playerSelection, computerSelection) {
     else {
         console.log(draw)
     }
-
 }
+playRound("rock", getComputerChoice())
