@@ -94,8 +94,18 @@ function playGame() {
   
     //oneRound;
   
-    console.log(humanScore);
-    console.log(computerScore);
+    console.log("User score = " + humanScore);
+    console.log("Computer score = " + computerScore);
+
+    if (humanScore > computerScore) {
+        console.log("Therefore, You win!");
+    }
+    else if (humanScore==computerScore) {
+        console.log("It is a draw")
+    }
+    else {
+        console.log("Therefore, You lose and computer wins!")
+    }
 }
 
 playGame()
