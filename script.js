@@ -29,3 +29,7 @@ function getHumanChoice() {
     return userInput.toLowerCase();
 }
 // getHumanChoice()
+
+// step 4 --- create score variables
+let humanScore = 0;
+let computerScore = 0;
