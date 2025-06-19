@@ -107,6 +107,26 @@ function getHumanChoice() {
     return userInput.toLowerCase();
 }
 
+function getHumanChoice1() {
+    let userInput = prompt("Rock, Paper or Scissors?");
+    return userInput.toLowerCase();
+}
+
+function getHumanChoice2() {
+    let userInput = prompt("Rock, Paper or Scissors?");
+    return userInput.toLowerCase();
+}
+
+function getHumanChoice3() {
+    let userInput = prompt("Rock, Paper or Scissors?");
+    return userInput.toLowerCase();
+}
+
+function getHumanChoice4() {
+    let userInput = prompt("Rock, Paper or Scissors?");
+    return userInput.toLowerCase();
+}
+
 // getHumanChoice()
 
 // step 4 --- create score variables
@@ -157,6 +177,12 @@ else if (humanChoice == "scissors" && computerChoice == "rock") {
 
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
+
+const humanSelection1 = getHumanChoice1();
+const humanSelection2 = getHumanChoice2();
+const humanSelection3 = getHumanChoice3();
+const humanSelection4 = getHumanChoice4();
+
 const computerSelection1 = getComputerChoice1();
 const computerSelection2 = getComputerChoice2();
 const computerSelection3 = getComputerChoice3();
@@ -170,10 +196,10 @@ function playGame() {
    // let oneRound = playGround(humanSelection, computerSelection);
 
     playGround(humanSelection, computerSelection);
-    playGround(humanSelection, computerSelection1);
-    playGround(humanSelection, computerSelection2);
-    playGround(humanSelection, computerSelection3);
-    playGround(humanSelection, computerSelection4);
+    playGround(humanSelection2, computerSelection1);
+    playGround(humanSelection3, computerSelection2);
+    playGround(humanSelection3, computerSelection3);
+    playGround(humanSelection4, computerSelection4);
     
   
   //  oneRound;
