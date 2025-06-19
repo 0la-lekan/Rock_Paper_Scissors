@@ -89,6 +89,8 @@ function playGame() {
     playGround(humanSelection, computerSelection);
     playGround(humanSelection, computerSelection);
     playGround(humanSelection, computerSelection);
+    playGround(humanSelection, computerSelection);
+    
   
     //oneRound;
   
