@@ -2,6 +2,7 @@
 console.log("Hello World");
 
 // step 2 --- generate computer choice
+
 function getComputerChoice() {
     let randomNum = Math.floor(Math.random()*100);
     let computerValue;
@@ -20,6 +21,83 @@ function getComputerChoice() {
         return computerValue;
     }
 }
+
+function getComputerChoice1() {
+    let randomNum = Math.floor(Math.random()*100);
+    let computerValue;
+    // console.log(randomNum);
+
+    if (randomNum >= 0 && randomNum < 31) {
+         computerValue = "rock";
+         return computerValue;
+    }
+    else if (randomNum >= 31 && randomNum < 61) {
+        computerValue = "paper";
+        return computerValue;
+    }
+    else {
+        computerValue = "scissors";
+        return computerValue;
+    }
+}
+
+function getComputerChoice2() {
+    let randomNum = Math.floor(Math.random()*100);
+    let computerValue;
+    // console.log(randomNum);
+
+    if (randomNum >= 0 && randomNum < 31) {
+         computerValue = "rock";
+         return computerValue;
+    }
+    else if (randomNum >= 31 && randomNum < 61) {
+        computerValue = "paper";
+        return computerValue;
+    }
+    else {
+        computerValue = "scissors";
+        return computerValue;
+    }
+}
+
+function getComputerChoice3() {
+    let randomNum = Math.floor(Math.random()*100);
+    let computerValue;
+    // console.log(randomNum);
+
+    if (randomNum >= 0 && randomNum < 31) {
+         computerValue = "rock";
+         return computerValue;
+    }
+    else if (randomNum >= 31 && randomNum < 61) {
+        computerValue = "paper";
+        return computerValue;
+    }
+    else {
+        computerValue = "scissors";
+        return computerValue;
+    }
+}
+
+function getComputerChoice4() {
+    let randomNum = Math.floor(Math.random()*100);
+    let computerValue;
+    // console.log(randomNum);
+
+    if (randomNum >= 0 && randomNum < 31) {
+         computerValue = "rock";
+         return computerValue;
+    }
+    else if (randomNum >= 31 && randomNum < 61) {
+        computerValue = "paper";
+        return computerValue;
+    }
+    else {
+        computerValue = "scissors";
+        return computerValue;
+    }
+}
+
 // getcomputerValue()
 
 // step 3 --- get human choice
@@ -28,6 +106,7 @@ function getHumanChoice() {
     let userInput = prompt("Rock, Paper or Scissors?");
     return userInput.toLowerCase();
 }
+
 // getHumanChoice()
 
 // step 4 --- create score variables
@@ -76,23 +155,28 @@ else if (humanChoice == "scissors" && computerChoice == "rock") {
 }
 }
 
-const humanSelection = getComputerChoice();
+const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
+const computerSelection1 = getComputerChoice1();
+const computerSelection2 = getComputerChoice2();
+const computerSelection3 = getComputerChoice3();
+const computerSelection4 = getComputerChoice4();
 
-playGround(humanSelection, computerSelection);
+
+// playGround(humanSelection, computerSelection);
 
 function playGame() {
 
-    //let oneRound = playGround(humanSelection, computerSelection);
+   // let oneRound = playGround(humanSelection, computerSelection);
 
     playGround(humanSelection, computerSelection);
-    playGround(humanSelection, computerSelection);
-    playGround(humanSelection, computerSelection);
-    playGround(humanSelection, computerSelection);
-    playGround(humanSelection, computerSelection);
+    playGround(humanSelection, computerSelection1);
+    playGround(humanSelection, computerSelection2);
+    playGround(humanSelection, computerSelection3);
+    playGround(humanSelection, computerSelection4);
     
   
-    //oneRound;
+  //  oneRound;
   
     console.log("User score = " + humanScore);
     console.log("Computer score = " + computerScore);
@@ -108,4 +192,7 @@ function playGame() {
     }
 }
 
-playGame()
+playGame();
+
+// console.log(Math.random());
+// console.log(Math.random());
