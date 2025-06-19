@@ -8,16 +8,24 @@ function getComputerChoice() {
     // console.log(randomNum);
 
     if (randomNum >= 0 && randomNum < 31) {
-         computerChoice = "Rock";
+         computerChoice = "rock";
          return computerChoice;
     }
     else if (randomNum >= 31 && randomNum < 61) {
-        computerChoice = "Paper";
+        computerChoice = "paper";
         return computerChoice;
     }
     else {
-        computerChoice = "Scissors";
+        computerChoice = "scissors";
         return computerChoice;
     }
 }
-console.log(getComputerChoice())
+// getComputerChoice()
+
+// step 3 --- get human choice
+
+function getHumanChoice() {
+    let userInput = prompt("Rock, Paper or Scissors?");
+    return userInput.toLowerCase();
+}
+// getHumanChoice()
