@@ -79,5 +79,21 @@ else if (humanChoice == "scissors" && computerChoice == "rock") {
 const humanSelection = getComputerChoice();
 const computerSelection = getComputerChoice();
 
- playGround(humanSelection, computerSelection);
+playGround(humanSelection, computerSelection);
 
+function playGame() {
+
+    //let oneRound = playGround(humanSelection, computerSelection);
+
+    playGround(humanSelection, computerSelection);
+    playGround(humanSelection, computerSelection);
+    playGround(humanSelection, computerSelection);
+    playGround(humanSelection, computerSelection);
+  
+    //oneRound;
+  
+    console.log(humanScore);
+    console.log(computerScore);
+}
+
+playGame()
