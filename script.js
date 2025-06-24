@@ -1,4 +1,5 @@
 // Step 1 --- testing console
+
 console.log("Hello World");
 
 // step 2 --- generate computer choice
@@ -6,13 +7,12 @@ console.log("Hello World");
 function getComputerChoice() {
     let randomNum = Math.floor(Math.random()*100);
     let computerValue;
-    // console.log(randomNum);
 
-    if (randomNum >= 0 && randomNum < 31) {
+    if (randomNum >= 0 && randomNum < 34) {
          computerValue = "rock";
          return computerValue;
     }
-    else if (randomNum >= 31 && randomNum < 61) {
+    else if (randomNum >= 34 && randomNum < 67) {
         computerValue = "paper";
         return computerValue;
     }
@@ -22,83 +22,6 @@ function getComputerChoice() {
     }
 }
 
-function getComputerChoice1() {
-    let randomNum = Math.floor(Math.random()*100);
-    let computerValue;
-    // console.log(randomNum);
-
-    if (randomNum >= 0 && randomNum < 31) {
-         computerValue = "rock";
-         return computerValue;
-    }
-    else if (randomNum >= 31 && randomNum < 61) {
-        computerValue = "paper";
-        return computerValue;
-    }
-    else {
-        computerValue = "scissors";
-        return computerValue;
-    }
-}
-
-function getComputerChoice2() {
-    let randomNum = Math.floor(Math.random()*100);
-    let computerValue;
-    // console.log(randomNum);
-
-    if (randomNum >= 0 && randomNum < 31) {
-         computerValue = "rock";
-         return computerValue;
-    }
-    else if (randomNum >= 31 && randomNum < 61) {
-        computerValue = "paper";
-        return computerValue;
-    }
-    else {
-        computerValue = "scissors";
-        return computerValue;
-    }
-}
-
-function getComputerChoice3() {
-    let randomNum = Math.floor(Math.random()*100);
-    let computerValue;
-    // console.log(randomNum);
-
-    if (randomNum >= 0 && randomNum < 31) {
-         computerValue = "rock";
-         return computerValue;
-    }
-    else if (randomNum >= 31 && randomNum < 61) {
-        computerValue = "paper";
-        return computerValue;
-    }
-    else {
-        computerValue = "scissors";
-        return computerValue;
-    }
-}
-
-function getComputerChoice4() {
-    let randomNum = Math.floor(Math.random()*100);
-    let computerValue;
-    // console.log(randomNum);
-
-    if (randomNum >= 0 && randomNum < 31) {
-         computerValue = "rock";
-         return computerValue;
-    }
-    else if (randomNum >= 31 && randomNum < 61) {
-        computerValue = "paper";
-        return computerValue;
-    }
-    else {
-        computerValue = "scissors";
-        return computerValue;
-    }
-}
-
-// getcomputerValue()
 
 // step 3 --- get human choice
 
@@ -107,29 +30,9 @@ function getHumanChoice() {
     return userInput.toLowerCase();
 }
 
-function getHumanChoice1() {
-    let userInput = prompt("Rock, Paper or Scissors?");
-    return userInput.toLowerCase();
-}
-
-function getHumanChoice2() {
-    let userInput = prompt("Rock, Paper or Scissors?");
-    return userInput.toLowerCase();
-}
-
-function getHumanChoice3() {
-    let userInput = prompt("Rock, Paper or Scissors?");
-    return userInput.toLowerCase();
-}
-
-function getHumanChoice4() {
-    let userInput = prompt("Rock, Paper or Scissors?");
-    return userInput.toLowerCase();
-}
-
-// getHumanChoice()
 
 // step 4 --- create score variables
+
 let humanScore = 0;
 let computerScore = 0;
 
@@ -137,72 +40,64 @@ let computerScore = 0;
 
 function playGround(humanChoice,computerChoice) {
 
+
 const draw = "It's a tie!";
 const scissorsWin = "Scissors beats Paper!";
 const paperWin = "Paper beats Rock!"; 
 const rockWin = "Rock beats Scissors!"
 const win = "You win";
 const lose = "You lose";
+const paperWinFullComputer = `${lose}, ${paperWin}`;
+const paperWinFullHuman = `${win}, ${paperWin}`;
+const scissorsWinWinFullHuman = `${win}, ${scissorsWin}`;
+const scissorsWinWinFullComputer = `${lose}, ${scissorsWin}`;
+const rockWinFullHuman = `${win}, ${rockWin}`;
+const rockWinFullComputer = `${lose}, ${rockWin}`;
 
-//try humanChoice.toLowerCase()
+console.log(`You entered ${humanChoice} and computer selects ${computerChoice}`);
 
 if (humanChoice == computerChoice) {
-     console.log(draw);
+    console.log(draw);
 }
 else if (humanChoice == "rock" && computerChoice == "paper") {
-    console.log(lose + ", " + paperWin);
-   return ++computerScore
+    ++computerScore;
+    console.log(paperWinFullComputer);
 }
 else if (humanChoice == "rock" && computerChoice == "scissors") {
-    console.log(win + ", " + rockWin);
-   return ++humanScore
+    ++humanScore;
+    console.log(rockWinFullHuman);
 }
 else if (humanChoice == "paper" && computerChoice == "rock") {
-    console.log(win + ", " + paperWin);
-   return ++humanScore
+    ++humanScore;
+    console.log(paperWinFullHuman);
 }
 else if (humanChoice == "paper" && computerChoice == "scissors") {
-    console.log(lose + ", " + scissorsWin);
-   return ++computerScore
+    ++computerScore;
+    console.log(scissorsWinWinFullComputer);
+   
 }
 else if (humanChoice == "scissors" && computerChoice == "paper") {
-    console.log(win + ", " + scissorsWin);
-   return ++humanScore
+    ++humanScore;
+    console.log(scissorsWinWinFullHuman);
+  
 }
 else if (humanChoice == "scissors" && computerChoice == "rock") {
-    console.log(lose + ", " + rockWin);
-   return ++computerScore
+    ++computerScore;
+    console.log(rockWinFullComputer);
 }
 }
 
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
 
-const humanSelection1 = getHumanChoice1();
-const humanSelection2 = getHumanChoice2();
-const humanSelection3 = getHumanChoice3();
-const humanSelection4 = getHumanChoice4();
-
-const computerSelection1 = getComputerChoice1();
-const computerSelection2 = getComputerChoice2();
-const computerSelection3 = getComputerChoice3();
-const computerSelection4 = getComputerChoice4();
-
-
-// playGround(humanSelection, computerSelection);
+ playGround(getHumanChoice(), getComputerChoice());
 
 function playGame() {
 
-   // let oneRound = playGround(humanSelection, computerSelection);
+    playGround(getHumanChoice(), getComputerChoice());
+    playGround(getHumanChoice(), getComputerChoice());
+    playGround(getHumanChoice(), getComputerChoice());
+    playGround(getHumanChoice(), getComputerChoice());
 
-    playGround(humanSelection, computerSelection);
-    playGround(humanSelection2, computerSelection1);
-    playGround(humanSelection3, computerSelection2);
-    playGround(humanSelection3, computerSelection3);
-    playGround(humanSelection4, computerSelection4);
     
-  
-  //  oneRound;
   
     console.log("User score = " + humanScore);
     console.log("Computer score = " + computerScore);
@@ -219,6 +114,3 @@ function playGame() {
 }
 
 playGame();
-
-// console.log(Math.random());
-// console.log(Math.random());
